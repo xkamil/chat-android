@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="vertical"
+    android:padding="@dimen/paddingLarge"
+    android:background="@color/colorPrimaryDark"
+    tools:context="pl.com.kamilwrobel.czater.LoginActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textStyle="bold"
+        android:textColor="@color/colorLightText"
+        android:paddingBottom="@dimen/paddingXLarge"
+        android:textSize="@dimen/textSizeXLarge"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/paddingSmall"
+        android:text="@string/login"
+        android:textColor="@color/colorLightText"
+        android:textSize="@dimen/textSizeMedium" />
+
+    <include
+        android:id="@+id/activity_login_et_login"
+        layout="@layout/edit_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/paddingSmall"
+        android:text="@string/password"
+        android:textColor="@color/colorLightText"
+        android:textSize="@dimen/textSizeMedium" />
+
+    <include
+        android:id="@+id/activity_login_et_password"
+        layout="@layout/edit_text_password" />
+
+    <Button
+        android:id="@+id/activity_login_btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/log_in" />
+
+    <TextView
+        android:id="@+id/activity_login_tv_register"
+        android:text="@string/have_no_account_then_register"
+        android:textColor="@color/colorLightText"
+        android:textSize="@dimen/textSizeMedium"
+        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

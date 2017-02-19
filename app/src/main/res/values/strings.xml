@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Czater</string>
+
+    <string name="log_in">Zaloguj</string>
+    <string name="log_out">Wyloguj</string>
+    <string name="register">Zarejestruj</string>
+    <string name="have_no_account_then_register">Nie posiadasz jeszcze konta? \n <u>Zarejestruj się.</u></string>
+
+    <string name="login">Login</string>
+    <string name="password">Hasło</string>
+    <string name="repeat_password">Powtórz hasło</string>
+
+
+</resources>

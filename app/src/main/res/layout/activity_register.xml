@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="vertical"
+    android:padding="@dimen/paddingLarge"
+    tools:context="pl.com.kamilwrobel.czater.RegisterActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/paddingSmall"
+        android:text="@string/login"
+        android:textColor="@color/colorLightText"
+        android:textSize="@dimen/textSizeMedium" />
+
+    <include
+        android:id="@+id/activity_register_et_login"
+        layout="@layout/edit_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/paddingSmall"
+        android:text="@string/password"
+        android:textColor="@color/colorLightText"
+        android:textSize="@dimen/textSizeMedium" />
+
+    <include
+        android:id="@+id/activity_register_et_password"
+        layout="@layout/edit_text_password" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/paddingSmall"
+        android:text="@string/repeat_password"
+        android:textColor="@color/colorLightText"
+        android:textSize="@dimen/textSizeMedium" />
+
+    <include
+        android:id="@+id/activity_register_et_repeat_password"
+        layout="@layout/edit_text_password" />
+
+    <Button
+        android:id="@+id/activity_register_btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/register" />
+
+</LinearLayout>
