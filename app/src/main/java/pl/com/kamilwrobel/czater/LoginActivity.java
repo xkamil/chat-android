@@ -3,6 +3,7 @@ package pl.com.kamilwrobel.czater;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,10 +32,15 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        allowBrowseWhenLoggedOut();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        allowBrowseWhenLoggedOut();
         ButterKnife.bind(this);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        return false;
     }
 
     @OnClick(R.id.activity_login_btn_login)
@@ -51,7 +57,7 @@ public class LoginActivity extends BaseActivity {
 
             @Override
             public void handleResponse(ApiKey apikey) {
-                LoginActivity.apikey = apikey;
+                logIn(apikey.getToken(), apikey.getUser_id());
                 Intent intent = new Intent(LoginActivity.this, ConversationListActivity.class);
                 startActivity(intent);
             }

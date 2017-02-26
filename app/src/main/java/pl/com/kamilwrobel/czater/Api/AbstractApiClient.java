@@ -10,6 +10,7 @@ import com.loopj.android.http.ResponseHandlerInterface;
 import com.loopj.android.http.TextHttpResponseHandler;
 
 import java.io.IOException;
+import java.util.Map;
 
 import cz.msebera.android.httpclient.*;
 import cz.msebera.android.httpclient.HttpResponse;
@@ -21,11 +22,21 @@ public abstract class AbstractApiClient {
     private AsyncHttpClient client = new AsyncHttpClient();
     private ObjectMapper mapper;
 
+
+
     protected AbstractApiClient() {
         this.mapper = new ObjectMapper();
     }
 
-    protected void sendGet(String url, RequestParams params, final TypeReference type, final ResponseHandler responseHandler) {
+    protected void sendGet(String url, RequestParams params, Map<String, String> headers, final TypeReference type, final ResponseHandler responseHandler) {
+        client.removeAllHeaders();
+
+        if(headers != null){
+            for (String key : headers.keySet()) {
+                Log.i(TAG, "Adding header: " + key + " : " + headers.get(key));
+                client.addHeader(key, headers.get(key));
+            }
+        }
 
         client.get(url, params, new TextHttpResponseHandler() {
             @Override
@@ -59,8 +70,17 @@ public abstract class AbstractApiClient {
 
     protected void sendPost(String url,
                             RequestParams params,
+                            Map<String, String> headers,
                             final TypeReference type,
                             final ResponseHandler responseHandler) {
+        client.removeAllHeaders();
+
+        if(headers != null){
+            for (String key : headers.keySet()) {
+                client.addHeader(key, headers.get(key));
+            }
+        }
+
         client.post(url, params, new TextHttpResponseHandler() {
 
             @Override

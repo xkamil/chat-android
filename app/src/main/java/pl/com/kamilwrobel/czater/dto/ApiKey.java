@@ -2,38 +2,38 @@ package pl.com.kamilwrobel.czater.dto;
 
 
 public class ApiKey {
-    private String key;
-    private String id;
+    private String token;
+    private String user_id;
 
     public ApiKey() {
     }
 
-    public ApiKey(String key, String user_id) {
-        this.key = key;
-        this.id = user_id;
+    public ApiKey(String token, String user_id) {
+        this.token = token;
+        this.user_id = user_id;
     }
 
-    public String getKey() {
-        return key;
+    public String getToken() {
+        return token;
     }
 
-    public void setKey(String key) {
-        this.key = key;
+    public void setToken(String token) {
+        this.token = token;
     }
 
-    public String getId() {
-        return id;
+    public String getUser_id() {
+        return user_id;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setUser_id(String user_id) {
+        this.user_id = user_id;
     }
 
     @Override
     public String toString() {
         return "ApiKey{" +
-                "key='" + key + '\'' +
-                ", id='" + id + '\'' +
+                "token='" + token + '\'' +
+                ", user_id='" + user_id + '\'' +
                 '}';
     }
 }

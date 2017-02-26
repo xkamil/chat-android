@@ -5,4 +5,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorError">#ff5544</color>
     <color name="colorLightText">#FFFFFF</color>
+
+    <color name="colorSentenceUser">#44ff44</color>
+    <color name="colorSentenceOther">#9dd900</color>
 </resources>
