@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_login"
+    android:id="@+id/activity_registration"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
     android:gravity="center_horizontal|center_vertical"
     android:orientation="vertical"
     android:padding="@dimen/padding_large"
-    tools:context="pl.com.kamilwrobel.czater.Login.LoginActivity">
+    tools:context="pl.com.kamilwrobel.czater.Register.RegistrationActivity">
 
     <ProgressBar
-        android:id="@+id/activity_login_progress_bar"
+        android:id="@+id/activity_registration_progress_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="invisible" />
@@ -21,7 +21,7 @@
         android:text="@string/login" />
 
     <EditText
-        android:id="@+id/activity_login_et_login"
+        android:id="@+id/activity_registration_et_login"
         style="@style/wide_input" />
 
     <TextView
@@ -29,19 +29,23 @@
         android:text="@string/password" />
 
     <EditText
-        android:id="@+id/activity_login_et_password"
+        android:id="@+id/activity_registration_et_password"
+        style="@style/wide_input"
+        android:inputType="textPassword" />
+
+    <TextView
+        style="@style/wide_label"
+        android:text="@string/repeat_password" />
+
+    <EditText
+        android:id="@+id/activity_registration_et_repeat_password"
         style="@style/wide_input"
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/activity_login_btn_login"
+        android:id="@+id/activity_registration_btn_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/log_in" />
-
-    <TextView
-        android:id="@+id/activity_login_tv_register"
-        style="@style/wide_label"
-        android:text="@string/have_no_account_then_register" />
+        android:text="@string/register" />
 
 </LinearLayout>
